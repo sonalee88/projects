@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.color-theme-cont {
+    display: flex;
+    position: absolute;
+    top : 2.5rem;
+    left: 10rem;
+    z-index:5;
+}
+#white, #black {
+    height: 36px;
+    width: 44px;
+    cursor: pointer;
+}
+#white {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.options-cont {
+    height: 3.7rem;
+    width: 3.5rem;
+    background-color: #f1f2f6;
+    position: absolute;
+    top: 1.8rem;
+    left: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(66, 47, 47, 0.3) 0px 5px 15px;
+    cursor: pointer;
+    z-index:5;
+}
+
+@keyframes scale-tools-theme{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.scale-tools-theme{
+    animation-name: scale-tools-theme;
+    animation-duration: 0.9s;
+}
+.tools-cont {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8.7rem;
+    left: 2.4rem;
+    /* height: 31.3rem;
+    width: 3.8rem; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 12px;
+    background-color: #f1f2f6;
+    z-index:5;
+}
+.tools-cont > *{
+    display: block;
+    height: 3.3rem;
+    width: 3.3rem;
+    margin: 4px;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 30%;
+}
+
+#pencil{
+    background-color:#d7e0ee;
+}
+.pencil-tool-cont{
+    height: 7rem;
+    width: 8rem;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 9.3rem;
+    left: 7.2rem;
+    border-radius: 3px;
+    display: none;
+    z-index:5;
+}
+.pencil-width{
+    width: 80%;
+    margin: 0.8rem 1rem;
+}
+.pencil-color-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pencil-color{
+    margin: 4px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.black {
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.purple {
+    background-color: purple;
+}
+
+.eraser-tool-cont{
+    height: 2.8rem;
+    width: 8rem;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 13.35rem;
+    left: 7.2rem;
+    border-radius: 3px;
+    text-align: center;
+    display: none;
+    z-index:5;
+}
+.eraser-tool-cont input{
+    margin-top: 0.8rem;
+    width: 80%;
+}
+
+.sticky-cont{
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 8rem;
+    left: 30rem;
+    z-index:5;
+}
+.header-cont{
+    height: 2rem;
+    background-color: #f1f2f6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor:grab;
+}
+.header-cont > * {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.note-cont{
+    height: calc(100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.note-cont img{
+    height: 100%;
+    width: 100%;
+}
+
+/************ Different shapes ************/
+.shape-tool-cont{
+    height: 8.2rem;
+    width: 8rem;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 20.6rem;
+    left: 7.2rem;
+    border-radius: 3px;
+    display: none;
+    z-index:5;
+}
+.geometric-shape-cont { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+.geometric-shape{
+    height: 2.4rem;
+    width: 2.4rem;
+    cursor: pointer;
+    margin: 3px 1px;
+    padding: 6px;
+    border-radius: 40%;
+}
+.geometric-shape > img {
+    height: 25px;
+    width: 25px;
+}
+.selected-shape {
+    background-color: #d7e0ee;
+}
+hr{
+    width: 80%;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.shape-color-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+.shape-color{
+    margin: 4px;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/**************** Multiple pages ******************/
+.pagination {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    display: flex;
+    padding: 20px 30px 20px 10px;
+    border-radius: 10%;
+    z-index:5;
+}
+.change-page-icon{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#next-page {
+    margin-left: 3px;
+}
+.change-page-icon > img{
+    width: 22px;
+    height: 22px;
+}
+.change-page-icon:hover {
+    background-color: rgb(240, 231, 231);
+}
+#current-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    width: 50px;
+    height: 32px;
+    /* border: 2px solid black; */
+    margin-left: 30px;
+    box-shadow: black 0px 0px 0px 2px inset, rgb(255, 255, 255) 5px -5px 0px -3px, rgb(31, 193, 27) 5px -5px, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(255, 217, 19) 10px -10px;
+}
+#current-page > p {
+    font-weight: 550;
+    font-size: 1.05rem;
+}
+canvas {
+    background-color: white;
+}

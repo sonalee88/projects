@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="color-theme-cont scale-tools-theme">
+        <div id="white" class="color-theme" style="background-color: white;"></div>
+        <div id="black" class=" color-theme" style="background-color: black;"></div>
+    </div>
+    <div class="tools-cont scale-tools-theme">
+        <img id="pencil" src="Icons/pencil.png" title="pencil">
+        <img id="eraser" src="Icons/eraser.png" title="eraser">
+        <img id="sticky" src="Icons/sticky-notes.png" title="sticky notes">
+        <img id="shapes" src="Icons/shape.png" title="shapes">
+        <img id="undo" src="Icons/undo.png" title="undo">
+        <img id="redo" src="Icons/redo.png" title="redo">
+        <img id="download" src="Icons/download.png" title="download notes">
+        <img id="upload" src="Icons/upload.png" title="upload image">
+        <img id="clear-all" src="Icons/dustbin.png" title="clear all">
+    </div>
+
+    <div class="pencil-tool-cont">
+        <input class="pencil-width" type="range" min="2" max="10" value="3">
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+        <div class="pencil-color-cont">
+            <div class="green pencil-color"></div>
+            <div class="purple pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont">
+        <input class="eraser-width" type="range" min="2" max="10" value="3">
+    </div>
+
+    <div class="shape-tool-cont">
+        <div class="geometric-shape-cont">
+
+            <div id="line" class="selected-shape geometric-shape">
+                <img src="Icons/diagonal-line.png">
+            </div>
+            <div id="rectangle" class="geometric-shape">
+                <img src="Icons/square.png">
+            </div>
+            <div id="circle" class="geometric-shape">
+                <img src="Icons/circle.png">
+            </div>
+            <div id="triangle" class="geometric-shape">
+                <img src="Icons/triangle.png">
+            </div>
+            <div id="rhombus" class="geometric-shape">
+                <img src="Icons/rhombus.png">
+            </div>  
+
+        </div>
+        <hr>
+        <div class="shape-color-cont">
+            <div class="black shape-color"></div>
+            <div class="red shape-color"></div>
+            <div class="blue shape-color"></div>
+        </div>
+        
+    </div>
+
+    <!-- <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimize" style="background-color: #2ed573;"></div>
+            <div class="remove" style="background-color: #ff4757;"></div>
+        </div>
+        <div class="note-cont">
+            <textarea></textarea>
+        </div>
+    </div> -->
+
+    <div class="pagination">
+        <div id="prev-page" class="change-page-icon">
+            <img src="Icons/previous.png">
+        </div>
+        <div id="next-page" class="change-page-icon">
+            <img src="Icons/next.png">
+        </div>
+        <div id="current-page">
+            <p>1/1</p>
+        </div>
+    </div>
+
+
+    <canvas></canvas>
+
+    <script src="tool.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
